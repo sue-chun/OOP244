@@ -1,0 +1,13 @@
+1.	What is the difference between an abstract base class and a concrete class?
+Abstract base classes are declared but not yet defined.  In this lab, virtual functions were used where they were declared in iAccount but defined in its derived classes. 
+
+
+2.	Identify the functions that shadow functions of the same name in your solution?
+Account::credit is shadowed by ChequingAccount::credit
+Account::debit is shadowed by ChequingAccount::debit
+
+
+
+3.	Explain what have you learned in this workshop.
+I have learned more indepth on hierarchies and how functions can be effectively shared by base classes to derived classes.  I have learned how shadowing is implemented to ensure the hierarchy is not known to client code.  I understand how derived classes can use member functions of their base class as well as add their own member functions.  I learned the logic behind using queries such as Account::balance() as to allow derived functions to access the private member function current_balance.  
+

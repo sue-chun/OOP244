@@ -1,0 +1,35 @@
+1)	Why do you need to allocate new dynamic memory when you increase the size of an existing array of dynamically allocated memory?
+`	Because the originally allocated dynamic memory only stores the original size.  Increasing the size of an array requires more memory and thus new dynamic memory must be added.  The members of the array must be copied over to the new, larger, dynamically allocated memory size. 
+
+2)	The Kingdom structure stores the name of the kingdom in an array of char-acters. At the end of the program, we do not use the delete operator to deallocate the memory occupied by the name. Why don’t we need to use the delete operator on this array itself? Explain.
+`	Because the Kingdom structure was allocated in static memory.  This memory is not given back to the system until the program has completed and given control back to the system. 
+
+3)	There are two display(...) function definitions. How does the compiler know which definition to call from your main function? 
+	The compiler chooses the proper function based on the type and number of parameters.  The compiler reaches the function call, and matches the inputted parameters with a display function that has the same type and number of parameters.  If one function was display(int) and the other was display(int, int) and the call was display(a, b), the compiler will know to match this with the function with 2 parameters.  
+
+4)	Explain what have you have learned in this workshop.
+	I have learned how to allocate and deallocate dynamic memory, copy array elements to a new array and overloading a function.  I have strengthened my understanding of arrays where we must loop to run through all the elements of an array.  I have also realized that a struct/class is a type.  
+
+
+Quiz 2 Reflect:
+
+2.
+I did false
+Answer is true
+
+3. 
+I did function return value
+Answer is order of parameters 
+
+4. 
+I did struct * item
+Answer is apple 
+
+5. 
+I did array * pointers [6] = 0;
+Answer is float * pointers [6];
+
+6. 
+I did delete myCourses [];
+Answer is delete [] myCourses;
+

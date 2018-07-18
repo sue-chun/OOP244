@@ -1,0 +1,17 @@
+1. This is because the function is a binary arithmetic operand.  The sum is a different value and should not change the current object.  Returning a reference to a Fraction object should be used with operands that directly change the object such as assignment or pre and post fix operands. 
+2. Tester function (main function) created temporary objects in testing the member operator functions.  For example, (b + d).display(); creates a temporary object of b + d, and then calls the display() function using this temporary object.  The other temporary objects are b+=d and a+b. 
+3. In the definition for operator !=, I use the overloaded == operator.  Secondly, in the definition for += operator, I use the overloaded + operator.  Thirdly, in the definition for += operator, I call the member function reduce().  Lastly, in various member function and member operator definitions, I use the function isEmpty(). 
+4. I have learned how to overload operators and use them in other overloaded operator definitions to reduce code duplication and keep cleaner and crisp code.  I have also learned to appreciate how overloaded operators can make coding faster, more convenient and easier to read. 
+
+Quiz Reflect
+2. type of right hand operand and const status of operation
+
+3. container& operator++();
+Container& operator += (Container c) 
+
+Fill in the blanks:
+if (m_volume < m_capacity) 
+if (m_volume < m_capacity) 
+Container& Container:: operator += (Container c)
+
+

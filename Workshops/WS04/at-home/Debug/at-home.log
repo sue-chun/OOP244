@@ -1,0 +1,12 @@
+﻿  Passenger.cpp
+c:\users\sue\desktop\ws04\at-home\passenger.cpp(26): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(340): note: see declaration of 'strncpy'
+c:\users\sue\desktop\ws04\at-home\passenger.cpp(28): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(340): note: see declaration of 'strncpy'
+c:\users\sue\desktop\ws04\at-home\passenger.cpp(41): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(340): note: see declaration of 'strncpy'
+c:\users\sue\desktop\ws04\at-home\passenger.cpp(43): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(340): note: see declaration of 'strncpy'
+  w4_at_home.cpp
+  Generating Code...
+  at-home.vcxproj -> C:\Users\Sue\Desktop\WS04\at-home\Debug\at-home.exe

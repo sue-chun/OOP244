@@ -1,0 +1,10 @@
+
+1. Each c-style character string for family or given name has only maximum name length + 1.  The + 1 is the null at the end of the string so the compiler recognizes it at as the end of the string. 
+
+2. Overloading functions is a feature of C++ that is not present in C. In C, it would give an error because it thinks there are two definitions of the same function as opposed to in C++ where the compiler knows there are two overloaded functions with different parameters, order of parameters and number of parameters. 
+
+3. I have learned some new logic on how to add alternating numbers, creating array from an integer input and creating a new array to store the alternating numbers for summing.  I have also learned to keep track of different arrays and their purposes when typing out the year and balance owing/refund due.  I also learned how to use set.precision in making sure the output has 2 decimal places as required in the lab instructions. 
+
+8. cout.unsetf(ios::left);
+
+9. extraction 

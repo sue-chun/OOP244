@@ -1,0 +1,22 @@
+Sue Ming Chun 032343154
+Quiz
+4. Identical 
+5. don’t need the name of parameters in declaration: Person (char *, int, char, int, int, int, char *, int) 
+
+1) What is a safe empty state? Could you define another state as the safe empty
+state?
+The safe empty state for an object is initializing variables to a pre-determined value (such as 0 or -1) to ensure that if the client code calls the object before values are assigned to it, they will not receive unexpected values.  Any state that the programmer wants to use to determine a safe empty state can be used. 
+
+2) Describe how you have minimized code duplication.
+By creating member functions that perform a task that is used often, the rest of the code (including client code) does not have to re-write code every time we want to perform a particular function.  For example, if we wanted to find out the maximum of two numbers, we don’t have to keep coding "if (n1 < n2) return n2;", we can write this code (and other more complicated code) in a member function and call the member function whenever it is needed. In this lab in particular, if we needed to add thousands of passengers (like in real life), it would make the coding much easier to just call required member functions. 
+
+3) Explain why the canTravelWith(...) member function can access the private data of the object referenced in its parameter.
+It is part of the same class as the private data members and therefore can access all of the members private or public directly. 
+
+
+4) What statement do you need to add to ensure that the strncpy(...) function executes correctly?
+Need to add #include <cstring>
+
+
+5) Explain what you have learned in this workshop.
+I have learned how to overload constructors in this lab first using a zero parameter constructor, and then contructor with parameters.  I learned how to put an object into the safe empty state if the inputs from client code were not valid.  

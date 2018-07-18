@@ -1,0 +1,4 @@
+﻿  w2_at_home.cpp
+f:\semester 2\oop244\oop-workshops\ws02\at-home\w2_at_home.cpp(67): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\string.h(337): note: see declaration of 'strncpy'
+  at-home.vcxproj -> F:\Semester 2\OOP244\OOP-Workshops\WS02\at-home\Debug\at-home.exe

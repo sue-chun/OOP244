@@ -1,0 +1,12 @@
+1) We should compare the address of the current object to the address of the source object before continuing the copying because if the addresses match, the deallocation of the previously allocated dynamic memory would deallocate the source data thus leaving us no access to the resources.  The logic would fail at pnumbers[i] = src.pnumbers[i];
+
+2) I put my phone number validation logic into a member function.  I also called the = operator in my Copy Constructor to avoid code duplication.  I used the member functions isEmpty() and isValid() in my += operator as well to validate the input without duplicating code. 
+
+3) I have learned how to add more elements to a dynamically allocated array in my += operator.  I am now more familiar with the concept of deep copying and how it differs from shallow copying.  Deep copying requires allocating/deallocating dynamic memory.  Shallow copying is only appropriate for non resource instance variables. 
+
+Quiz Reflect
+I wrote: email = new char; 
+Correct answer is: email = new char[];
+
+I wrote *this != source
+Correct answer is this != &source s
