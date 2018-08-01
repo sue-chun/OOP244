@@ -1,0 +1,40 @@
+Script started on Wed 06 Jun 2018 04:07:41 PM EDT
+]0;smchun@mtrx-node01pd:~/coding/OOP/athome3[?1034h[smchun@mtrx-node01pd athome3]$ ws
+Canada Revenue Agency Account App
+=================================
+
+Please enter your family name: Doe
+Please enter your given name: 
+Please enter your social insurance number (0 to quit): 193456787
+Invalid input! Try again.
+Please enter your family name: Doe
+Please enter your given name: Jane
+Please enter your social insurance number (0 to quit): 123456789
+Invalid input! Try again.
+Please enter your family name: Doe
+Please enter your given name: Jane
+Please enter your social insurance number (0 to quit): 193456787
+Please enter the year of your tax return (0 to quit): 2014
+Please enter the balance owing on your tax return (0 to quit): 34.56
+Please enter the year of your tax return (0 to quit): 2015
+Please enter the balance owing on your tax return (0 to quit): -1234
+Please enter the year of your tax return (0 to quit): 2016
+Please enter the balance owing on your tax return (0 to quit): 1.23
+Please enter the year of your tax return (0 to quit): 2013
+Please enter the balance owing on your tax return (0 to quit): -0.12
+Please enter the year of your tax return (0 to quit): 0
+----------------------------------------
+Testing the display function
+----------------------------------------
+Family Name: Doe
+Given Name : Jane
+CRA Account: 193456787
+Year (2014) balance owing: 34.56
+Year (2015) refund due: 1234.00
+Year (2016) No balance owing or refund due!
+Year (2013) No balance owing or refund due!
+----------------------------------------
+]0;smchun@mtrx-node01pd:~/coding/OOP/athome3[smchun@mtrx-node01pd athome3]$ exit
+exit
+
+Script done on Wed 06 Jun 2018 04:08:50 PM EDT

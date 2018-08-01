@@ -1,0 +1,15 @@
+Testing Error State Module
+
+isClear(): Passed!
+
+===========| Long Message***********
+Some error message that is really long long  long  long  long  long  long  long long  long  long  long  long  long  long  long  long  long  long  long  long long  long  long  long  long  long  long  long  long  long  long  long  long long  long  long  long  long  long  long  long  long  long  long  long  long long  long  long  long  long  long  long  long  long  long  long  long  long long  long  long  long  long  long  long  long  long  long  long  long  long long  long  long  long  long  long  long  long  long  long  long  long  long long  long  long  long  long  long  long  long  long  long  long  long  long long  long  long  long  long  long  long  long  long  long  long  long  long long  long  long  long  long  long  long  long  long  long  long  long  long long  long  long  long  long  long  long  long  long  long  long  long  long long  long  long  long  long  long  long  long  long  long  long  long  long long  long  long  long  long  long  long  long  long  long  long  long  long long  long  long  long  long  long  long  long  long  long  long  long  long long  long  long  long  long  long  long  long  long  long  long  long  long long  long  long  long  long  long  long  long  long  long  long  long  long long  long  long  long  long  long  long  long  long  long  long  long  long long  long  long  long  long  long  long  long  long  long  long  long  long long  long  long  long  long  long  long  long  long  long  long  long  long
+isClear(): Passed!
+
+Short Message
+Short Message
+isClear(): Passed!
+
+isClear(): Passed!
+
+You passed all the tests!
