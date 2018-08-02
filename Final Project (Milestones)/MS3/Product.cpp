@@ -23,7 +23,10 @@ namespace AMA {
 	}
 
 	const char * Product::name() const {
-		return the_name;
+		if (the_name != nullptr)
+			return the_name;
+		else
+			return nullptr;
 	}
 
 	const char * Product::sku() const {
@@ -59,7 +62,7 @@ namespace AMA {
 
 	Product::Product(char new_type) {
 		the_type = new_type;
-		the_sku[0] = '\0';						// check here if needed (might need initialize the_type
+		the_sku[0] = '\0';							// check here if needed (might need initialize the_type
 		the_unit[0] = '\0';
 		the_name = nullptr;
 		the_onhand = 0;
@@ -80,13 +83,13 @@ namespace AMA {
 		the_pretax = new_pretax;
 		the_taxable = new_taxable;
 
-		name(new_name);				// call name() function to deep copy product name
+		name(new_name);													// call name() function to deep copy product name
 	}
 
 	Product::Product(const Product & src) {
 		if (src.the_name != nullptr) {
 			the_name = nullptr;
-			*this = src;				// call overloaded assignment operator 
+			*this = src;												// call overloaded assignment operator 
 		}
 	}
 
@@ -111,7 +114,7 @@ namespace AMA {
 
 			delete[] the_name;
 
-			name(src.the_name);			// call name() function to deep copy product name
+			name(src.the_name);											// call name() function to deep copy product name
 		}
 		return *this;
 	}
@@ -125,19 +128,18 @@ namespace AMA {
 		return file;
 	}
 
-	std::fstream & Product::load(std::fstream & file) {
-		Product temp;
+	std::fstream & Product::load(std::fstream & file) {					// works fine for MS3 purposes, see updated version of Product::load in MS5 
+		Product temp;										 
 
 		if (file.is_open()) {
 			file >> temp.the_type >> temp.the_sku >> temp.the_unit >> temp.the_name >> temp.the_onhand >> temp.the_taxable >> temp.the_pretax >> temp.the_needed;
-			*this = temp;					// call copy assignment operator 
+			*this = temp;												// call copy assignment operator 
 		}
 		return file;
-		
 	}
 
-	std::ostream & Product::write(std::ostream & os, bool linear) const {
-		if (linear) {
+	std::ostream & Product::write(std::ostream & os, bool linear) const {			// function inserts the data fields for the current object into the ostream object in the following order and separates them by a vertical bar character (‘|’).
+		if (linear) {																// If the bool parameter is true, the output is on a single line with the field widths 
 			os << setw(max_sku_length) << left << sku() << "|"
 				<< setw(20) << left << name() << "|"
 				<< setw(7) << fixed << setprecision(2) << right << cost() << "|"
@@ -145,7 +147,7 @@ namespace AMA {
 				<< setw(10) << left << unit() << "|"
 				<< setw(4) << right << qtyNeeded() << "|";
 		}
-		else {
+		else {																		// If the bool parameter is false, this function inserts the fields on separate lines 
 			os << "SKU: " << sku() << endl
 				<< "Name: " << name() << endl
 				<< "Price: " << price() << endl;
@@ -160,7 +162,7 @@ namespace AMA {
 		return os;
 	}
 
-	std::istream & Product::read(std::istream & is) {
+	std::istream & Product::read(std::istream & is) {								// works fine for MS3, see updated Product::read function in MS5
 		char new_sku[max_sku_length + 1];
 		char *new_name = new char[max_name_length + 1];
 		char new_unit[max_unit_length + 1];
@@ -187,7 +189,7 @@ namespace AMA {
 		else if (tax_input == 'N' || tax_input == 'n')
 			new_taxable = false;
 		else {
-			is.setstate(ios::failbit);
+			is.setstate(ios::failbit);												// If this function encounters an error for the Taxed input option, it sets the failure bit of the istream object (calling istream::setstate(std::ios::failbit)) 
 			prod_es.message("Only (Y)es or (N)o are acceptable");
 		}
 
@@ -216,7 +218,7 @@ namespace AMA {
 			}
 		}
 
-		if (!is.fail()) {
+		if (!is.fail()) {															// If the istream object has accepted all input successfully, this function stores the input values accepted in a temporary object and copy assigns it to the current object. 
 			*this = Product(new_sku, new_name, new_unit, new_onhand, new_taxable, new_pretax, new_needed);
 		}
 		return is;
@@ -225,7 +227,7 @@ namespace AMA {
 
 
 	bool Product::operator==(const char * new_sku) const {
-		if (strcmp(new_sku, the_sku) == 0)
+		if (strcmp(new_sku, the_sku) == 0)											// returns true if the string is identical to the sku of the current object
 			return true;
 		else
 			return false;
@@ -236,7 +238,7 @@ namespace AMA {
 		return total_cost;
 	}
 
-	void Product::quantity(int new_onhand) {
+	void Product::quantity(int new_onhand) {										// This function resets the number of units that are on hand to the number received.
 		the_onhand = new_onhand;
 	}
 
@@ -269,7 +271,7 @@ namespace AMA {
 			return false;
 	}
 
-	int Product::operator+=(int units) {
+	int Product::operator+=(int units) {											// If the integer received is positive-valued, this function adds it to the quantity on hand.
 		if (units > 0) {
 			the_onhand += units;
 			return the_onhand;
