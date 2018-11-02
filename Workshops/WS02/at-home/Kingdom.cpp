@@ -28,6 +28,7 @@ namespace sict {
 	void display(const Kingdom& x) {
 		cout << x.m_name << ", population " << x.m_population << endl;
 	}
+
 	void display(Kingdom const *kingdoms, int n) {
 		int sum = 0;
 		cout << "------------------------------" << endl
